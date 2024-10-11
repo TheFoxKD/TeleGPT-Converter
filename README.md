@@ -1,12 +1,13 @@
 # TeleGPT Converter
 
-TeleGPT Converter is a Python utility that transforms Telegram chat JSON data into GPT-friendly formats. It helps prepare conversation data for easy processing by AI language models.
+TeleGPT Converter is a Python utility that transforms Telegram chat JSON data into GPT-friendly formats. It helps
+prepare conversation data for easy processing by AI language models.
 
 [![Python Version](https://img.shields.io/badge/python-3.7%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
 <p align="center">
-  <img src="assets/screenshot.png" alt="TeleGPT Converter Screenshot" width="600">
+  <img src="assets/screenshot.png" alt="Sublime's custom image"/>
 </p>
 
 ## Features
@@ -68,33 +69,34 @@ The input should be a JSON file exported from Telegram, typically containing a s
 
 ```json
 {
-  "name": "Chat Name",
-  "type": "personal_chat",
-  "id": 1234567890,
-  "messages": [
-    {
-      "id": 1,
-      "type": "message",
-      "date": "2023-01-01T12:00:00",
-      "date_unixtime": "1672574400",
-      "from": "User Name",
-      "from_id": "user123456789",
-      "text": "Hello, world!",
-      "text_entities": [
-        {
-          "type": "plain",
-          "text": "Hello, world!"
-        }
-      ]
-    },
-    // More messages...
-  ]
+   "name": "Chat Name",
+   "type": "personal_chat",
+   "id": 1234567890,
+   "messages": [
+      {
+         "id": 1,
+         "type": "message",
+         "date": "2023-01-01T12:00:00",
+         "date_unixtime": "1672574400",
+         "from": "User Name",
+         "from_id": "user123456789",
+         "text": "Hello, world!",
+         "text_entities": [
+            {
+               "type": "plain",
+               "text": "Hello, world!"
+            }
+         ]
+      }
+      // More messages...
+   ]
 }
 ```
 
 ## Output Formats
 
 ### Text Format (Default)
+
 ```
 User Name, [01.01.2023 12:00]
 Hello, world!
@@ -104,22 +106,24 @@ Hi there!
 ```
 
 ### JSON Format
+
 ```json
 [
-  {
-    "sender": "User Name",
-    "content": "Hello, world!",
-    "timestamp": "2023-01-01T12:00:00"
-  },
-  {
-    "sender": "Another User",
-    "content": "Hi there!",
-    "timestamp": "2023-01-01T12:05:00"
-  }
+   {
+      "sender": "User Name",
+      "content": "Hello, world!",
+      "timestamp": "2023-01-01T12:00:00"
+   },
+   {
+      "sender": "Another User",
+      "content": "Hi there!",
+      "timestamp": "2023-01-01T12:05:00"
+   }
 ]
 ```
 
 ### CSV Format
+
 ```csv
 sender,timestamp,content
 "User Name","2023-01-01T12:00:00","Hello, world!"
