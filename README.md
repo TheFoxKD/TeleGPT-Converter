@@ -6,7 +6,7 @@ TeleGPT Converter is a Python utility that transforms Telegram chat JSON data in
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
 <p align="center">
-  <img src="assets/screenshot.png" alt="TeleGPT Converter Screenshot" width="600">
+  <img src="assets/screenshot.png" alt="
 </p>
 
 ## Features
